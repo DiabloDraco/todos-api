@@ -8,23 +8,57 @@
 	<link rel="stylesheet" href="./css/main.css">
 	<title></title>
 </head>
-<body>
-	<header class="header">
-		<div class="container">
+<body class="bg-violet">
+	<h2 class="mt-5 d-flex justify-content-center align-items-center text-warning">TipaGram</h2>
+	<div id="wrapper" class="row row-cols-3 mt-5 d-flex">
+		<div>
+			<ul id="usersList" class="d-flex flex-column list-unstyled ps-3 gap-2">
+
+			</ul>			
 		</div>
-	</header>
-	
-	<main>
-		<section class="hero"> 
-			<div class="container">
+		<div>
+			<ul id="postList" class="d-flex flex-column list-unstyled ps-3 gap-2">
+
+			</ul>			
+		</div>
+		<div>
+			<ul id="commentList" class="d-flex flex-column list-unstyled ps-3 gap-2">
+
+			</ul>			
+		</div>
+	</div>
+	<template id="usersTemplate">
+		<li id="userItem" class="border border-3 rounded-3 border-success p-2 me-5">
+			<span>Name: </span><p id="usersName" class="d-inline-block">Name</p><br>
+			<span>UserName: </span><p class="d-inline-block" id="usersUserName">lol</p>
+			<div class="mt-2">
+				<span>Email: </span><a id="usersMail" href="mailTo:mirmuhsin101@gmail.com">email</a>
 			</div>
-		</section>        
-	</main>
-	
-	<footer class="footer">
-		<div class="container">
-		</div>
-	</footer>	
+			<div class="mt-2">
+				<span>Phone: </span><a id="usersTel" class="tel" href="tel: +99895 800 61 51">+99895 800 61 51</a>
+			</div>
+			<div class="mt-2">
+				<span>Website: </span><a id="usersWeb" href="site">website</a>
+			</div>
+		</li>
+	</template>
+	<template id="postsTemplate">
+		<li id="postItem" class="border border-3 rounded-3 border-success p-2 me-5">
+			<span>Title: </span><p id="postsTitle" class="d-inline-block">Title</p><br>
+			<span>Body: </span><p id="postsBody" class="d-inline-block">lol</p>
+		</li>
+	</template>
+	<template id="commentsTemplate">
+		<li id="commentItem" class="border border-3 rounded-3 border-success p-2 me-5">
+			<span>Name: </span><p id="commentsName" class="d-inline-block">Name</p><br>
+			<div>
+				<span>Email: </span><a id="commentsMail" href="mailTo:mirmuhsin101@gmail.com">email</a>
+			</div>
+			<div class="mt-2">
+				<span>Body: </span><p id="commentsBody" class="d-inline-block">BODY</p>
+			</div>
+		</li>
+	</template>
 	<script src="./js/main.js"></script>
 	<script src="./js/bootstrap.js"></script>
 </body>
