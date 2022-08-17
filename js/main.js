@@ -73,6 +73,7 @@ function renderPost(array) {
 }
 
 function renderComment(array) {
+    elCommentsList.innerHTML = null
     let fragment = document.createDocumentFragment()
     
     for (let i = 0; i < array.length; i++) {
