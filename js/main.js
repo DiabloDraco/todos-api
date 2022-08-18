@@ -41,9 +41,11 @@ elWrapper.addEventListener("click" , function (evt) {
     let current = evt.target.dataset
 
     if (current.userID) {
-        fetch(`https://jsonplaceholder.typicode.com/user/${current.userID}/posts`)
+        fetch(`https://jsonplaceholder.typicode.com/posts`)
             .then(res => res.json())
-            .then(data => renderPost(data))
+            .then(data => renderPost(data.filter(function (item) {
+               return current.userID == item.userId
+            })))
     }
     if (current.postId) {
         fetch(`https://jsonplaceholder.typicode.com/posts/${current.postId}/comments`)
