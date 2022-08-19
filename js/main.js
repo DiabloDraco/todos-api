@@ -1,3 +1,9 @@
+let localToken = JSON.parse(localStorage.getItem("token"))
+
+if (!localToken) {
+    window.location.href = "./register.html"
+}
+
 let elUsersList = document.querySelector("#usersList")
 let elPostsList = document.querySelector("#postList")
 let elCommentsList = document.querySelector("#commentList")
@@ -96,3 +102,10 @@ function renderComment(array) {
     }
     elCommentsList.appendChild(fragment)
 }
+
+let elLogOut = document.querySelector("#logOut")
+
+elLogOut.addEventListener("click" , function () {
+    localStorage.removeItem("token")
+    window.location.href = "./register.html"
+})
