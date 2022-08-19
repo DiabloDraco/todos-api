@@ -10,6 +10,8 @@ p , a {
 
 .bg-violet {
     background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 #userItem:hover{
@@ -42,4 +44,15 @@ p , a {
 
 #password {
     width: 700px;
+}
+@media only screen and (max-width: 800px) {
+    /* Mobile */
+
+    #login {
+        width: 80vw;
+    }
+    
+    #password {
+        width: 80vw;
+    }
 }
