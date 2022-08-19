@@ -28,6 +28,7 @@ function renderUsers(array) {
         usersTemplate.querySelector("#usersName").dataset.userID = array[i].id
         usersTemplate.querySelector("#usersUserName").textContent = array[i].username
         usersTemplate.querySelector("#usersUserName").dataset.userID = array[i].id
+        usersTemplate.querySelector("div").dataset.userID = array[i].id
         usersTemplate.querySelector("#usersMail").textContent = array[i].email
         usersTemplate.querySelector("#usersMail").dataset.userID = array[i].id
         usersTemplate.querySelector("#usersMail").href = `mailTo: ${array[i].email}`

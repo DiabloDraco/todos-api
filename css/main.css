@@ -11,8 +11,15 @@ p , a {
 .bg-violet {
     background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
     background-repeat: no-repeat;
+    height: 100%;
+}
+
+.bg-violet1 {
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    background-repeat: no-repeat;
     height: 100vh;
 }
+
 
 #userItem:hover{
     background-color: aquamarine;
