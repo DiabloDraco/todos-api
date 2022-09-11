@@ -8,7 +8,8 @@ elForm.addEventListener("submit" , function (evt) {
     let elPassword = document.querySelector("#password").value
 
     if (elLogin.length != 0 && elPassword.length != 0) {
-        token.push(elLogin , elPassword)
+        token.push({elLogin , elPassword})
+        console.log(token);
         localStorage.setItem("token" , JSON.stringify(token))
         window.location.href = "./index.html"
     }
